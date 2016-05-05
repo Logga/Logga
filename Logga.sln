@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{13C6ACFA-EB15-42C9-9C5E-0B2FE67278AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logga", "Logga.Core\Logga.csproj", "{9261AB89-07CF-4EE3-8A86-19095F244665}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logga.Data.SqlServer", "Logga.Data.SqlServer\Logga.Data.SqlServer.csproj", "{B884DAD5-1752-4A10-8500-27914DB6FA4F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3C4F605C-921A-4658-8075-37788370E574}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggaSample.Api", "Samples\LoggaSample.Api\LoggaSample.Api.csproj", "{01A8EB9C-0CF7-4EAE-B095-677C15C019BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggaSample.Mvc", "Samples\LoggaSample.Mvc\LoggaSample.Mvc.csproj", "{2A6A6867-A15C-4173-B88F-5C66939A6595}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9261AB89-07CF-4EE3-8A86-19095F244665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9261AB89-07CF-4EE3-8A86-19095F244665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9261AB89-07CF-4EE3-8A86-19095F244665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9261AB89-07CF-4EE3-8A86-19095F244665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B884DAD5-1752-4A10-8500-27914DB6FA4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B884DAD5-1752-4A10-8500-27914DB6FA4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B884DAD5-1752-4A10-8500-27914DB6FA4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B884DAD5-1752-4A10-8500-27914DB6FA4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01A8EB9C-0CF7-4EAE-B095-677C15C019BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01A8EB9C-0CF7-4EAE-B095-677C15C019BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01A8EB9C-0CF7-4EAE-B095-677C15C019BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01A8EB9C-0CF7-4EAE-B095-677C15C019BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A6A6867-A15C-4173-B88F-5C66939A6595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A6A6867-A15C-4173-B88F-5C66939A6595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A6A6867-A15C-4173-B88F-5C66939A6595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A6A6867-A15C-4173-B88F-5C66939A6595}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{01A8EB9C-0CF7-4EAE-B095-677C15C019BC} = {13C6ACFA-EB15-42C9-9C5E-0B2FE67278AA}
+		{2A6A6867-A15C-4173-B88F-5C66939A6595} = {13C6ACFA-EB15-42C9-9C5E-0B2FE67278AA}
+	EndGlobalSection
+EndGlobal

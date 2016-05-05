@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Logga.Models.ErrorLogEntry>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet light">
+			<div class="portlet-title">
+				<div class="caption">
+				</div>
+				@*<div class="actions">
+					@Html.FontAwesomeActionLink("Criar Novo", "Criar", "fa fa-plus", htmlAttributes: new { @class = "btn btn-default btn-sm btn-circle" })
+				</div>*@
+			</div>
+			<div class="portlet-body">
+				<div class="table-container">
+					<table class="table table-striped table-bordered table-hover dataTable no-footer">
+						<thead>
+							<tr>
+								<th>
+									@Html.DisplayNameFor(model => model.DateError)
+								</th>
+								<th>
+									@Html.DisplayNameFor(model => model.Source)
+								</th>
+								<th>
+									@Html.DisplayNameFor(model => model.Target)
+								</th>
+								<th>
+									@Html.DisplayNameFor(model => model.Type)
+								</th>
+								<th>
+									@Html.DisplayNameFor(model => model.User)
+								</th>
+								<th>
+									@Html.DisplayNameFor(model => model.Host)
+								</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+						@*@foreach (var item in Model) {
+							<tr>
+								<td>
+									@item.DateError
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.Source)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.Target)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.Type)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.User)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.Host)
+								</td>
+								<td>
+									@Html.ActionLink("Details", "Details", new { id = item.ErrorLogId }, new { @class = "btn default btn-xs green-stripe" })
+								</td>
+							</tr>
+							}*@
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+@section scripts {
+    @Scripts.Render("~/bundles/datatables")
+
+    <script>
+        jQuery(document).ready(function () {
+            $('table').DataTable({
+                "paging": false,
+                "language": {
+                    "url": "@Url.Action("DatatableJson")"
+                }
+            });
+        });
+    </script>
+}
+

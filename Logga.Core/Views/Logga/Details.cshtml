@@ -1,0 +1,88 @@
+﻿@model Logga.Models.ErrorLogEntry
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet blue-chambray box">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="fa fa-cogs"></i>
+                </div>
+
+			</div>
+			<div class="portlet-body">
+				<div class="row static-info">
+					<div class="col-md-5 name">
+						@Html.DisplayNameFor(model => model.DateError)
+					</div>
+					<div class="col-md-7 value">
+						@Model.DateError
+					</div>
+				</div>
+				<div class="row static-info">
+					<div class="col-md-5 name">
+						@Html.DisplayNameFor(model => model.Source)
+					</div>
+					<div class="col-md-7 value">
+						@Html.DisplayFor(model => model.Source)
+					</div>
+				</div>
+				<div class="row static-info">
+					<div class="col-md-5 name">
+						@Html.DisplayNameFor(model => model.Target)
+					</div>
+					<div class="col-md-7 value">
+						@Html.DisplayFor(model => model.Target)
+					</div>
+				</div>
+				<div class="row static-info">
+					<div class="col-md-5 name">
+						@Html.DisplayNameFor(model => model.Type)
+					</div>
+					<div class="col-md-7 value">
+						@Html.DisplayFor(model => model.Type)
+					</div>
+				</div>
+				<div class="row static-info">
+					<div class="col-md-5 name">
+						@Html.DisplayNameFor(model => model.User)
+					</div>
+					<div class="col-md-7 value">
+						@Html.DisplayFor(model => model.User)
+					</div>
+				</div>
+				<div class="row static-info">
+					<div class="col-md-5 name">
+						@Html.DisplayNameFor(model => model.Host)
+					</div>
+					<div class="col-md-7 value">
+						@Html.DisplayFor(model => model.Host)
+					</div>
+				</div>
+                <div class="row static-info">
+                    <div class="col-md-5 name">
+                        @Html.DisplayNameFor(model => model.Message)
+                    </div>
+                    <div class="col-md-7 value">
+                        @Html.DisplayFor(model => model.Message)
+                    </div>
+                </div>
+                <div class="row static-info">
+                    <div class="col-md-5 name">
+                        @Html.DisplayNameFor(model => model.InnerException)
+                    </div>
+                    <div class="col-md-7 value">
+                        @Html.DisplayFor(model => model.InnerException)
+                    </div>
+                </div>
+                <div class="row static-info">
+                    <div class="col-md-5 name">
+                        @Html.DisplayNameFor(model => model.StackTrace)
+                    </div>
+                    <div class="col-md-7 value">
+                        @Html.DisplayFor(model => model.StackTrace)
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
