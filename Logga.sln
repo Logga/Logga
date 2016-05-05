@@ -22,6 +22,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggaSample.Mvc", "Samples\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{75E97A86-B3CE-48AC-B284-DCDD8F38D6C8}"
 	ProjectSection(SolutionItems) = preProject
+		License.txt = License.txt
 		README.md = README.md
 	EndProjectSection
 EndProject
