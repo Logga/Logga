@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Logga.Data.SqlServer.Entities
+namespace Logga.Data
 {
     public class LoggaEntry
     {
-        public long ErrorLogId { get; set; }
+        public long LoggaEntryId { get; set; }
 
         [DisplayName("Date")]
         public DateTime DateError { get; set; }

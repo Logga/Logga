@@ -88,7 +88,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\LoggaEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UseSqlServerData.cs" />
   </ItemGroup>
@@ -97,6 +96,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logga.Data\Logga.Data.csproj">
+      <Project>{8e912167-840c-4e30-9f7c-c92467a45ec7}</Project>
+      <Name>Logga.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

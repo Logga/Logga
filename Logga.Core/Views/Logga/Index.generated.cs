@@ -31,148 +31,324 @@ namespace ASP
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Logga/Index.cshtml")]
-    public partial class _Views_Logga_Index_cshtml : System.Web.Mvc.WebViewPage<IEnumerable<Logga.Models.ErrorLogEntry>>
+    public partial class _Views_Logga_Index_cshtml : System.Web.Mvc.WebViewPage<IEnumerable<Logga.Data.LoggaEntry>>
     {
         public _Views_Logga_Index_cshtml()
         {
         }
         public override void Execute()
         {
-WriteLiteral("<div");
-
-WriteLiteral(" class=\"row\"");
-
-WriteLiteral(">\r\n\t<div");
-
-WriteLiteral(" class=\"col-md-12\"");
-
-WriteLiteral(">\r\n\t\t<div");
-
-WriteLiteral(" class=\"portlet light\"");
-
-WriteLiteral(">\r\n\t\t\t<div");
-
-WriteLiteral(" class=\"portlet-title\"");
-
-WriteLiteral(">\r\n\t\t\t\t<div");
-
-WriteLiteral(" class=\"caption\"");
-
-WriteLiteral(">\r\n\t\t\t\t</div>\r\n\t\t\t\t");
-
-WriteLiteral("\r\n\t\t\t</div>\r\n\t\t\t<div");
-
-WriteLiteral(" class=\"portlet-body\"");
-
-WriteLiteral(">\r\n\t\t\t\t<div");
-
-WriteLiteral(" class=\"table-container\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t<table");
-
-WriteLiteral(" class=\"table table-striped table-bordered table-hover dataTable no-footer\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t\t<thead>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<th>\r\n");
-
-WriteLiteral("\t\t\t\t\t\t\t\t\t");
-
             
-            #line 19 "..\..\Views\Logga\Index.cshtml"
-                               Write(Html.DisplayNameFor(model => model.DateError));
+            #line 3 "..\..\Views\Logga\Index.cshtml"
+  
+    Layout = null;
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n\t\t\t\t\t\t\t\t</th>\r\n\t\t\t\t\t\t\t\t<th>\r\n");
+WriteLiteral("\r\n\r\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <meta");
 
-WriteLiteral("\t\t\t\t\t\t\t\t\t");
+WriteLiteral(" charset=\"utf-8\"");
 
-            
-            #line 22 "..\..\Views\Logga\Index.cshtml"
-                               Write(Html.DisplayNameFor(model => model.Source));
+WriteLiteral(" />\r\n    <meta");
 
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n\t\t\t\t\t\t\t\t</th>\r\n\t\t\t\t\t\t\t\t<th>\r\n");
+WriteLiteral(" name=\"viewport\"");
 
-WriteLiteral("\t\t\t\t\t\t\t\t\t");
+WriteLiteral(" content=\"width=device-width, initial-scale=1.0\"");
 
-            
-            #line 25 "..\..\Views\Logga\Index.cshtml"
-                               Write(Html.DisplayNameFor(model => model.Target));
+WriteLiteral(">\r\n    <title>Hi, I\'m Logga and i\'m your Friend.n</title>\r\n    <link");
 
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n\t\t\t\t\t\t\t\t</th>\r\n\t\t\t\t\t\t\t\t<th>\r\n");
+WriteLiteral(" rel=\"stylesheet\"");
 
-WriteLiteral("\t\t\t\t\t\t\t\t\t");
+WriteLiteral(" type=\"text/css\"");
+
+WriteLiteral(" href=\"https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.cs" +
+"s\"");
+
+WriteLiteral(" />\r\n    <link");
+
+WriteLiteral(" rel=\"stylesheet\"");
+
+WriteLiteral(" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\"");
+
+WriteLiteral(">\r\n    <script");
+
+WriteLiteral(" src=\"https://code.jquery.com/jquery-2.2.3.min.js\"");
+
+WriteLiteral("></script>\r\n    <script");
+
+WriteLiteral(" src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\"");
+
+WriteLiteral("></script>\r\n    <script");
+
+WriteLiteral(" type=\"text/javascript\"");
+
+WriteLiteral(" src=\"https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.j" +
+"s\"");
+
+WriteLiteral("></script>\r\n</head>\r\n<body>\r\n    <div");
+
+WriteLiteral(" class=\"navbar navbar-default navbar-fixed-top\"");
+
+WriteLiteral(">\r\n        <div");
+
+WriteLiteral(" class=\"container\"");
+
+WriteLiteral(">\r\n            <div");
+
+WriteLiteral(" class=\"navbar-header\"");
+
+WriteLiteral(">\r\n                <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" class=\"navbar-toggle\"");
+
+WriteLiteral(" data-toggle=\"collapse\"");
+
+WriteLiteral(" data-target=\".navbar-collapse\"");
+
+WriteLiteral(">\r\n                    <span");
+
+WriteLiteral(" class=\"icon-bar\"");
+
+WriteLiteral("></span>\r\n                    <span");
+
+WriteLiteral(" class=\"icon-bar\"");
+
+WriteLiteral("></span>\r\n                    <span");
+
+WriteLiteral(" class=\"icon-bar\"");
+
+WriteLiteral("></span>\r\n                </button>\r\n");
+
+WriteLiteral("                ");
 
             
             #line 28 "..\..\Views\Logga\Index.cshtml"
-                               Write(Html.DisplayNameFor(model => model.Type));
+           Write(Html.ActionLink("Logga", "Index", "Logga", new { area = "" }, new { @class = "navbar-brand" }));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n\t\t\t\t\t\t\t\t</th>\r\n\t\t\t\t\t\t\t\t<th>\r\n");
+WriteLiteral("\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div");
 
-WriteLiteral("\t\t\t\t\t\t\t\t\t");
+WriteLiteral(" class=\"container\"");
 
-            
-            #line 31 "..\..\Views\Logga\Index.cshtml"
-                               Write(Html.DisplayNameFor(model => model.User));
+WriteLiteral(">\r\n        <br /><br /><br /><br />\r\n        <div");
 
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n\t\t\t\t\t\t\t\t</th>\r\n\t\t\t\t\t\t\t\t<th>\r\n");
+WriteLiteral(" class=\"row\"");
 
-WriteLiteral("\t\t\t\t\t\t\t\t\t");
+WriteLiteral(">\r\n");
+
+WriteLiteral("            ");
 
             
-            #line 34 "..\..\Views\Logga\Index.cshtml"
-                               Write(Html.DisplayNameFor(model => model.Host));
+            #line 35 "..\..\Views\Logga\Index.cshtml"
+       Write(Html.ActionLink("Create Test Error.", "CreateError"));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n\t\t\t\t\t\t\t\t</th>\r\n\t\t\t\t\t\t\t\t<th></th>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t</thead>\r\n\t\t\t\t\t\t<tbody>\r\n" +
-"\t\t\t\t\t\t");
+WriteLiteral("\r\n        </div>\r\n        <br />\r\n        <div");
 
-WriteLiteral("\r\n\r\n\t\t\t\t\t\t</tbody>\r\n\t\t\t\t\t</table>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</di" +
-"v>\r\n\r\n");
+WriteLiteral(" class=\"row\"");
 
-DefineSection("scripts", () => {
+WriteLiteral(">\r\n            <table");
 
-WriteLiteral("\r\n");
+WriteLiteral(" class=\"table table-striped table-bordered\"");
 
-WriteLiteral("    ");
+WriteLiteral(">\r\n                <thead>\r\n                    <tr>\r\n                        <th" +
+">\r\n");
 
-            
-            #line 75 "..\..\Views\Logga\Index.cshtml"
-Write(Scripts.Render("~/bundles/datatables"));
+WriteLiteral("                            ");
 
             
-            #line default
-            #line hidden
-WriteLiteral("\r\n\r\n    <script>\r\n        jQuery(document).ready(function () {\r\n            $(\'ta" +
-"ble\').DataTable({\r\n                \"paging\": false,\r\n                \"language\":" +
-" {\r\n                    \"url\": \"");
-
-            
-            #line 82 "..\..\Views\Logga\Index.cshtml"
-                       Write(Url.Action("DatatableJson"));
+            #line 43 "..\..\Views\Logga\Index.cshtml"
+                       Write(Html.DisplayNameFor(model => model.DateError));
 
             
             #line default
             #line hidden
-WriteLiteral("\"\r\n                }\r\n            });\r\n        });\r\n    </script>\r\n");
+WriteLiteral("\r\n                        </th>\r\n                        <th>\r\n");
 
-});
+WriteLiteral("                            ");
 
-WriteLiteral("\r\n");
+            
+            #line 46 "..\..\Views\Logga\Index.cshtml"
+                       Write(Html.DisplayNameFor(model => model.Source));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n                        </th>\r\n                        <th>\r\n");
+
+WriteLiteral("                            ");
+
+            
+            #line 49 "..\..\Views\Logga\Index.cshtml"
+                       Write(Html.DisplayNameFor(model => model.Target));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n                        </th>\r\n                        <th>\r\n");
+
+WriteLiteral("                            ");
+
+            
+            #line 52 "..\..\Views\Logga\Index.cshtml"
+                       Write(Html.DisplayNameFor(model => model.Type));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n                        </th>\r\n                        <th>\r\n");
+
+WriteLiteral("                            ");
+
+            
+            #line 55 "..\..\Views\Logga\Index.cshtml"
+                       Write(Html.DisplayNameFor(model => model.User));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n                        </th>\r\n                        <th>\r\n");
+
+WriteLiteral("                            ");
+
+            
+            #line 58 "..\..\Views\Logga\Index.cshtml"
+                       Write(Html.DisplayNameFor(model => model.Host));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n                        </th>\r\n                        <th></th>\r\n             " +
+"       </tr>\r\n                </thead>\r\n                <tbody>\r\n");
+
+            
+            #line 64 "..\..\Views\Logga\Index.cshtml"
+                    
+            
+            #line default
+            #line hidden
+            
+            #line 64 "..\..\Views\Logga\Index.cshtml"
+                     foreach (var item in Model)
+                    {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                        <tr>\r\n                            <td>\r\n");
+
+WriteLiteral("                                ");
+
+            
+            #line 68 "..\..\Views\Logga\Index.cshtml"
+                           Write(item.DateError);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n                            </td>\r\n                            <td>\r\n");
+
+WriteLiteral("                                ");
+
+            
+            #line 71 "..\..\Views\Logga\Index.cshtml"
+                           Write(Html.DisplayFor(modelItem => item.Source));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n                            </td>\r\n                            <td>\r\n");
+
+WriteLiteral("                                ");
+
+            
+            #line 74 "..\..\Views\Logga\Index.cshtml"
+                           Write(Html.DisplayFor(modelItem => item.Target));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n                            </td>\r\n                            <td>\r\n");
+
+WriteLiteral("                                ");
+
+            
+            #line 77 "..\..\Views\Logga\Index.cshtml"
+                           Write(Html.DisplayFor(modelItem => item.Type));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n                            </td>\r\n                            <td>\r\n");
+
+WriteLiteral("                                ");
+
+            
+            #line 80 "..\..\Views\Logga\Index.cshtml"
+                           Write(Html.DisplayFor(modelItem => item.User));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n                            </td>\r\n                            <td>\r\n");
+
+WriteLiteral("                                ");
+
+            
+            #line 83 "..\..\Views\Logga\Index.cshtml"
+                           Write(Html.DisplayFor(modelItem => item.Host));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n                            </td>\r\n                            <td>\r\n");
+
+WriteLiteral("                                ");
+
+            
+            #line 86 "..\..\Views\Logga\Index.cshtml"
+                           Write(Html.ActionLink("Details", "Details", new { id = item.LoggaEntryId }, new { @class = "btn default btn-xs" }));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n                            </td>\r\n                        </tr>\r\n");
+
+            
+            #line 89 "..\..\Views\Logga\Index.cshtml"
+                    }
+
+            
+            #line default
+            #line hidden
+WriteLiteral(@"                </tbody>
+            </table>
+        </div>
+
+        <script>
+            jQuery(document).ready(function () {
+                $('table').DataTable();
+            });
+        </script>
+        <hr />
+        <footer>
+            <p>&copy; ");
+
+            
+            #line 101 "..\..\Views\Logga\Index.cshtml"
+                 Write(DateTime.Now.Year);
+
+            
+            #line default
+            #line hidden
+WriteLiteral(" - My ASP.NET Application</p>\r\n        </footer>\r\n    </div>\r\n</body>\r\n</html>\r\n");
 
         }
     }

@@ -31,349 +31,192 @@ namespace ASP
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Logga/Details.cshtml")]
-    public partial class _Views_Logga_Details_cshtml : System.Web.Mvc.WebViewPage<Logga.Models.ErrorLogEntry>
+    public partial class _Views_Logga_Details_cshtml : System.Web.Mvc.WebViewPage<Logga.Data.LoggaEntry>
     {
         public _Views_Logga_Details_cshtml()
         {
         }
         public override void Execute()
         {
-WriteLiteral("<div");
-
-WriteLiteral(" class=\"row\"");
-
-WriteLiteral(">\r\n\t<div");
-
-WriteLiteral(" class=\"col-md-12\"");
-
-WriteLiteral(">\r\n\t\t<div");
-
-WriteLiteral(" class=\"portlet blue-chambray box\"");
-
-WriteLiteral(">\r\n\t\t\t<div");
-
-WriteLiteral(" class=\"portlet-title\"");
-
-WriteLiteral(">\r\n\t\t\t\t<div");
-
-WriteLiteral(" class=\"caption\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t<i");
-
-WriteLiteral(" class=\"fa fa-cogs\"");
-
-WriteLiteral("></i>\r\n                </div>\r\n\r\n\t\t\t</div>\r\n\t\t\t<div");
-
-WriteLiteral(" class=\"portlet-body\"");
-
-WriteLiteral(">\r\n\t\t\t\t<div");
-
-WriteLiteral(" class=\"row static-info\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"col-md-5 name\"");
-
-WriteLiteral(">\r\n");
-
-WriteLiteral("\t\t\t\t\t\t");
-
             
-            #line 15 "..\..\Views\Logga\Details.cshtml"
-                   Write(Html.DisplayNameFor(model => model.DateError));
+            #line 3 "..\..\Views\Logga\Details.cshtml"
+  
+    Layout = null;
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div");
+WriteLiteral("\r\n\r\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <title>Hi, I\'m Logga and i\'m your friend" +
+"!</title>\r\n    <meta");
 
-WriteLiteral(" class=\"col-md-7 value\"");
+WriteLiteral(" name=\"viewport\"");
 
-WriteLiteral(">\r\n");
+WriteLiteral(" content=\"width=device-width\"");
 
-WriteLiteral("\t\t\t\t\t\t");
+WriteLiteral(">\r\n    <link");
 
-            
-            #line 18 "..\..\Views\Logga\Details.cshtml"
-                   Write(Model.DateError);
+WriteLiteral(" rel=\"stylesheet\"");
 
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div");
+WriteLiteral(" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\"");
 
-WriteLiteral(" class=\"row static-info\"");
+WriteLiteral(">\r\n    <script");
 
-WriteLiteral(">\r\n\t\t\t\t\t<div");
+WriteLiteral(" src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\"");
 
-WriteLiteral(" class=\"col-md-5 name\"");
+WriteLiteral("></script>\r\n</head>\r\n\r\n<body");
 
-WriteLiteral(">\r\n");
+WriteLiteral(" bgcolor=\"white\"");
 
-WriteLiteral("\t\t\t\t\t\t");
+WriteLiteral(" class=\"container\"");
 
-            
-            #line 23 "..\..\Views\Logga\Details.cshtml"
-                   Write(Html.DisplayNameFor(model => model.Source));
+WriteLiteral(">\r\n    <div");
 
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div");
+WriteLiteral(" class=\"navbar navbar-default navbar-fixed-top\"");
 
-WriteLiteral(" class=\"col-md-7 value\"");
+WriteLiteral(">\r\n        <div");
 
-WriteLiteral(">\r\n");
+WriteLiteral(" class=\"container\"");
 
-WriteLiteral("\t\t\t\t\t\t");
+WriteLiteral(">\r\n            <div");
 
-            
-            #line 26 "..\..\Views\Logga\Details.cshtml"
-                   Write(Html.DisplayFor(model => model.Source));
+WriteLiteral(" class=\"navbar-header\"");
 
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div");
+WriteLiteral(">\r\n                <button");
 
-WriteLiteral(" class=\"row static-info\"");
+WriteLiteral(" type=\"button\"");
 
-WriteLiteral(">\r\n\t\t\t\t\t<div");
+WriteLiteral(" class=\"navbar-toggle\"");
 
-WriteLiteral(" class=\"col-md-5 name\"");
+WriteLiteral(" data-toggle=\"collapse\"");
 
-WriteLiteral(">\r\n");
+WriteLiteral(" data-target=\".navbar-collapse\"");
 
-WriteLiteral("\t\t\t\t\t\t");
+WriteLiteral(">\r\n                    <span");
 
-            
-            #line 31 "..\..\Views\Logga\Details.cshtml"
-                   Write(Html.DisplayNameFor(model => model.Target));
+WriteLiteral(" class=\"icon-bar\"");
+
+WriteLiteral("></span>\r\n                    <span");
+
+WriteLiteral(" class=\"icon-bar\"");
+
+WriteLiteral("></span>\r\n                    <span");
+
+WriteLiteral(" class=\"icon-bar\"");
+
+WriteLiteral("></span>\r\n                </button>\r\n");
+
+WriteLiteral("                ");
 
             
-            #line default
-            #line hidden
-WriteLiteral("\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"col-md-7 value\"");
-
-WriteLiteral(">\r\n");
-
-WriteLiteral("\t\t\t\t\t\t");
-
-            
-            #line 34 "..\..\Views\Logga\Details.cshtml"
-                   Write(Html.DisplayFor(model => model.Target));
+            #line 25 "..\..\Views\Logga\Details.cshtml"
+           Write(Html.ActionLink("Back to Index", "Index", "Logga", new { area = "" }, new { @class = "navbar-brand" }));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div");
+WriteLiteral("\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <br /><br />\r\n    <span>\r\n " +
+"       <h1>Server Error in \'/\' Application.<hr");
 
-WriteLiteral(" class=\"row static-info\"");
+WriteLiteral(" width=\"100%\"");
 
-WriteLiteral(">\r\n\t\t\t\t\t<div");
+WriteLiteral(" size=\"1\"");
 
-WriteLiteral(" class=\"col-md-5 name\"");
+WriteLiteral(" color=\"silver\"");
 
-WriteLiteral(">\r\n");
+WriteLiteral("></h1>\r\n\r\n        ");
 
-WriteLiteral("\t\t\t\t\t\t");
+WriteLiteral("\r\n    </span>\r\n\r\n    <font");
+
+WriteLiteral(" face=\"Arial, Helvetica, Geneva, SunSans-Regular, sans-serif \"");
+
+WriteLiteral(">\r\n\r\n        <b> Description: </b>\r\n");
+
+WriteLiteral("        ");
 
             
             #line 39 "..\..\Views\Logga\Details.cshtml"
-                   Write(Html.DisplayNameFor(model => model.Type));
+   Write(Model.Message);
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"col-md-7 value\"");
-
-WriteLiteral(">\r\n");
-
-WriteLiteral("\t\t\t\t\t\t");
+WriteLiteral("\r\n        <br /><br />\r\n\r\n        <b> Exception Details: </b>");
 
             
             #line 42 "..\..\Views\Logga\Details.cshtml"
-                   Write(Html.DisplayFor(model => model.Type));
+                              Write(Model.Type);
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div");
-
-WriteLiteral(" class=\"row static-info\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"col-md-5 name\"");
-
-WriteLiteral(">\r\n");
-
-WriteLiteral("\t\t\t\t\t\t");
+WriteLiteral(": ");
 
             
-            #line 47 "..\..\Views\Logga\Details.cshtml"
-                   Write(Html.DisplayNameFor(model => model.User));
+            #line 42 "..\..\Views\Logga\Details.cshtml"
+                                           Write(Model.Message);
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div");
+WriteLiteral("<br>\r\n\r\n        ");
 
-WriteLiteral(" class=\"col-md-7 value\"");
-
-WriteLiteral(">\r\n");
-
-WriteLiteral("\t\t\t\t\t\t");
-
-            
-            #line 50 "..\..\Views\Logga\Details.cshtml"
-                   Write(Html.DisplayFor(model => model.User));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div");
-
-WriteLiteral(" class=\"row static-info\"");
-
-WriteLiteral(">\r\n\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"col-md-5 name\"");
-
-WriteLiteral(">\r\n");
-
-WriteLiteral("\t\t\t\t\t\t");
-
-            
-            #line 55 "..\..\Views\Logga\Details.cshtml"
-                   Write(Html.DisplayNameFor(model => model.Host));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div");
-
-WriteLiteral(" class=\"col-md-7 value\"");
-
-WriteLiteral(">\r\n");
-
-WriteLiteral("\t\t\t\t\t\t");
-
-            
-            #line 58 "..\..\Views\Logga\Details.cshtml"
-                   Write(Html.DisplayFor(model => model.Host));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n                <div");
-
-WriteLiteral(" class=\"row static-info\"");
-
-WriteLiteral(">\r\n                    <div");
-
-WriteLiteral(" class=\"col-md-5 name\"");
-
-WriteLiteral(">\r\n");
-
-WriteLiteral("                        ");
-
-            
-            #line 63 "..\..\Views\Logga\Details.cshtml"
-                   Write(Html.DisplayNameFor(model => model.Message));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n                    </div>\r\n                    <div");
-
-WriteLiteral(" class=\"col-md-7 value\"");
-
-WriteLiteral(">\r\n");
-
-WriteLiteral("                        ");
+WriteLiteral("\r\n\r\n        <br>\r\n\r\n        <b> Source File: </b> ");
 
             
             #line 66 "..\..\Views\Logga\Details.cshtml"
-                   Write(Html.DisplayFor(model => model.Message));
+                         Write(Model.Target);
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n                    </div>\r\n                </div>\r\n                <div");
+WriteLiteral("\r\n        <br><br>\r\n\r\n        <b>Stack Trace:</b>\r\n\r\n        <table");
 
-WriteLiteral(" class=\"row static-info\"");
+WriteLiteral(" width=\"100%\"");
 
-WriteLiteral(">\r\n                    <div");
+WriteLiteral(" bgcolor=\"#ffffcc\"");
 
-WriteLiteral(" class=\"col-md-5 name\"");
+WriteLiteral(">\r\n            <tbody>\r\n                <tr>\r\n                    <td>\r\n         " +
+"               <pre>\r\n");
 
-WriteLiteral(">\r\n");
-
-WriteLiteral("                        ");
-
-            
-            #line 71 "..\..\Views\Logga\Details.cshtml"
-                   Write(Html.DisplayNameFor(model => model.InnerException));
+WriteLiteral("                             ");
 
             
-            #line default
-            #line hidden
-WriteLiteral("\r\n                    </div>\r\n                    <div");
-
-WriteLiteral(" class=\"col-md-7 value\"");
-
-WriteLiteral(">\r\n");
-
-WriteLiteral("                        ");
-
-            
-            #line 74 "..\..\Views\Logga\Details.cshtml"
-                   Write(Html.DisplayFor(model => model.InnerException));
+            #line 76 "..\..\Views\Logga\Details.cshtml"
+                        Write(Model.StackTrace);
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n                    </div>\r\n                </div>\r\n                <div");
-
-WriteLiteral(" class=\"row static-info\"");
-
-WriteLiteral(">\r\n                    <div");
-
-WriteLiteral(" class=\"col-md-5 name\"");
-
-WriteLiteral(">\r\n");
-
-WriteLiteral("                        ");
+WriteLiteral("\r\n                            </pre>\r\n                    </td>\r\n                " +
+"</tr>\r\n            </tbody>\r\n        </table>\r\n\r\n        <br>\r\n        <b>Date:<" +
+"/b>&nbsp;");
 
             
-            #line 79 "..\..\Views\Logga\Details.cshtml"
-                   Write(Html.DisplayNameFor(model => model.StackTrace));
+            #line 84 "..\..\Views\Logga\Details.cshtml"
+                     Write(Model.DateError);
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n                    </div>\r\n                    <div");
-
-WriteLiteral(" class=\"col-md-7 value\"");
-
-WriteLiteral(">\r\n");
-
-WriteLiteral("                        ");
+WriteLiteral("\r\n        <br /><br>\r\n\r\n        <b>User:</b>&nbsp;");
 
             
-            #line 82 "..\..\Views\Logga\Details.cshtml"
-                   Write(Html.DisplayFor(model => model.StackTrace));
+            #line 87 "..\..\Views\Logga\Details.cshtml"
+                     Write(Model.User);
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n                    </div>\r\n                </div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div" +
-">\r\n</div>\r\n");
+WriteLiteral("\r\n        <br /><br>\r\n\r\n        <b>Host:</b>&nbsp;");
+
+            
+            #line 90 "..\..\Views\Logga\Details.cshtml"
+                     Write(Model.Host);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n        <br /><br>\r\n    </font>\r\n</body>\r\n</html>\r\n");
 
         }
     }

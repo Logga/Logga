@@ -1,88 +1,94 @@
-﻿@model Logga.Models.ErrorLogEntry
+﻿@model Logga.Data.LoggaEntry
 
-<div class="row">
-	<div class="col-md-12">
-		<div class="portlet blue-chambray box">
-			<div class="portlet-title">
-				<div class="caption">
-					<i class="fa fa-cogs"></i>
-                </div>
+@{
+    Layout = null;
+}
 
-			</div>
-			<div class="portlet-body">
-				<div class="row static-info">
-					<div class="col-md-5 name">
-						@Html.DisplayNameFor(model => model.DateError)
-					</div>
-					<div class="col-md-7 value">
-						@Model.DateError
-					</div>
-				</div>
-				<div class="row static-info">
-					<div class="col-md-5 name">
-						@Html.DisplayNameFor(model => model.Source)
-					</div>
-					<div class="col-md-7 value">
-						@Html.DisplayFor(model => model.Source)
-					</div>
-				</div>
-				<div class="row static-info">
-					<div class="col-md-5 name">
-						@Html.DisplayNameFor(model => model.Target)
-					</div>
-					<div class="col-md-7 value">
-						@Html.DisplayFor(model => model.Target)
-					</div>
-				</div>
-				<div class="row static-info">
-					<div class="col-md-5 name">
-						@Html.DisplayNameFor(model => model.Type)
-					</div>
-					<div class="col-md-7 value">
-						@Html.DisplayFor(model => model.Type)
-					</div>
-				</div>
-				<div class="row static-info">
-					<div class="col-md-5 name">
-						@Html.DisplayNameFor(model => model.User)
-					</div>
-					<div class="col-md-7 value">
-						@Html.DisplayFor(model => model.User)
-					</div>
-				</div>
-				<div class="row static-info">
-					<div class="col-md-5 name">
-						@Html.DisplayNameFor(model => model.Host)
-					</div>
-					<div class="col-md-7 value">
-						@Html.DisplayFor(model => model.Host)
-					</div>
-				</div>
-                <div class="row static-info">
-                    <div class="col-md-5 name">
-                        @Html.DisplayNameFor(model => model.Message)
-                    </div>
-                    <div class="col-md-7 value">
-                        @Html.DisplayFor(model => model.Message)
-                    </div>
-                </div>
-                <div class="row static-info">
-                    <div class="col-md-5 name">
-                        @Html.DisplayNameFor(model => model.InnerException)
-                    </div>
-                    <div class="col-md-7 value">
-                        @Html.DisplayFor(model => model.InnerException)
-                    </div>
-                </div>
-                <div class="row static-info">
-                    <div class="col-md-5 name">
-                        @Html.DisplayNameFor(model => model.StackTrace)
-                    </div>
-                    <div class="col-md-7 value">
-                        @Html.DisplayFor(model => model.StackTrace)
-                    </div>
-                </div>
-			</div>
-		</div>
-	</div>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hi, I'm Logga and i'm your friend!</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body bgcolor="white" class="container">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Back to Index", "Index", "Logga", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+        </div>
+    </div>
+    <br /><br />
+    <span>
+        <h1>Server Error in '/' Application.<hr width="100%" size="1" color="silver"></h1>
+
+        @*<h2> <i>@Model.Message</i> </h2>*@
+    </span>
+
+    <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+        <b> Description: </b>
+        @Model.Message
+        <br /><br />
+
+        <b> Exception Details: </b>@Model.Type: @Model.Message<br>
+
+        @*<b>Source Error:</b> <br><br>
+
+                    <table width="100%" bgcolor="#ffffcc">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <code>
+                                        <pre>
+            Line 15:          public ActionResult CreateError()
+            Line 16:         {
+            <font color="red">Line 17:             throw new Exception("Hi, I'm Logga and i'm your friend!");
+            </font>Line 18:         }
+            Line 19: </pre>
+                                    </code>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>*@
+
+        <br>
+
+        <b> Source File: </b> @Model.Target
+        <br><br>
+
+        <b>Stack Trace:</b>
+
+        <table width="100%" bgcolor="#ffffcc">
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>
+                             @Model.StackTrace
+                            </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <b>Date:</b>&nbsp;@Model.DateError
+        <br /><br>
+
+        <b>User:</b>&nbsp;@Model.User
+        <br /><br>
+
+        <b>Host:</b>&nbsp;@Model.Host
+        <br /><br>
+    </font>
+</body>
+</html>

@@ -1,5 +1,4 @@
 ﻿using Logga.Data.SqlServer;
-using Logga.Data.SqlServer.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +6,7 @@ using System.Web;
 using Dapper;
 using System.Web.Mvc;
 using System.Web.Http.Filters;
+using Logga.Data;
 
 namespace Logga
 {

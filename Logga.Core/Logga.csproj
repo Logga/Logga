@@ -154,28 +154,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Index.cshtml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Shared\_Layout.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Layout.cshtml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Content\bootstrap.css" />
-    <Content Include="Views\Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
-    <Content Include="Views\Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Views\Content\Site.css" />
-    <Content Include="Views\Content\Scripts\bootstrap.js" />
-    <Content Include="Views\Content\Scripts\bootstrap.min.js" />
-    <None Include="Views\Content\Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Views\Content\Scripts\jquery-1.10.2.js" />
-    <Content Include="Views\Content\Scripts\jquery-1.10.2.min.js" />
-    <None Include="Views\Content\Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Views\Content\Scripts\jquery.validate.js" />
-    <Content Include="Views\Content\Scripts\jquery.validate.min.js" />
-    <Content Include="Views\Content\Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Views\Content\Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Views\Content\Scripts\modernizr-2.6.2.js" />
-    <Content Include="Views\Content\Scripts\respond.js" />
-    <Content Include="Views\Content\Scripts\respond.min.js" />
-    <Content Include="Views\Content\Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -185,11 +172,13 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Content\Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Logga\Index.cshtml">
+    <Content Include="Views\Shared\_Layout.cshtml">
       <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Layout.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Logga\Index.cshtml">
       <LastGenOutput>Index.generated.cs</LastGenOutput>
+      <Generator>RazorGenerator</Generator>
     </Content>
     <Content Include="Views\Logga\Details.cshtml">
       <Generator>RazorGenerator</Generator>
@@ -198,15 +187,16 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Views\Content\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Views\Content\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Views\Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Logga.Data.SqlServer\Logga.Data.SqlServer.csproj">
       <Project>{b884dad5-1752-4a10-8500-27914db6fa4f}</Project>
       <Name>Logga.Data.SqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logga.Data\Logga.Data.csproj">
+      <Project>{8e912167-840c-4e30-9f7c-c92467a45ec7}</Project>
+      <Name>Logga.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
