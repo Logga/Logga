@@ -195,7 +195,7 @@
       <Name>Logga.Data.SqlServer</Name>
     </ProjectReference>
     <ProjectReference Include="..\Logga.Data\Logga.Data.csproj">
-      <Project>{3b3fdb0e-6c7c-42b4-a12f-844926214198}</Project>
+      <Project>{fb392211-bd34-4ccb-ab67-fc12a077d73d}</Project>
       <Name>Logga.Data</Name>
     </ProjectReference>
   </ItemGroup>
