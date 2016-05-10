@@ -145,7 +145,7 @@ WriteLiteral("            ");
 
             
             #line 35 "..\..\Views\Logga\Index.cshtml"
-       Write(Html.ActionLink("Create Test Error.", "CreateError"));
+       Write(Html.ActionLink("Create Test Error", "CreateError"));
 
             
             #line default
@@ -347,7 +347,7 @@ WriteLiteral(@"                </tbody>
             
             #line default
             #line hidden
-WriteLiteral(" - My ASP.NET Application</p>\n        </footer>\n    </div>\n</body>\n</html>\n");
+WriteLiteral(" - Logga Dashboard</p>\n        </footer>\n    </div>\n</body>\n</html>\n");
 
         }
     }

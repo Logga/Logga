@@ -13,11 +13,9 @@ namespace LoggaSample.Mvc.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult GenerateError()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            throw new Exception("This is an exception generated in MVC Sample. See Logga dashboard: http://" + Request.Url.Authority + "/Logga");
         }
 
         public ActionResult Contact()

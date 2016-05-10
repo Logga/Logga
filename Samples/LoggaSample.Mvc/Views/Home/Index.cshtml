@@ -9,14 +9,19 @@
 </div>
 
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4">
         <h2>Getting started</h2>
         <p>
             This sample is running under SQL Server. See our Wiki to see the other database options.
         </p>
         <p><a class="btn btn-default" href="https://github.com/renilsonmeneguci/Logga/wiki">Learn more &raquo;</a></p>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
+        <h2>See Logga in Action</h2>
+        <p>Click here to generate an Exception. See Controllers/Controller.cs for the implementation.</p>
+        <p><a class="btn btn-default" href="@Url.Action("GenerateError", "Home")">Geronimo! &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
         <h2>The Logga Dashboard</h2>
         <p>Logga runs into your application in an specific route.</p>
         <p><a class="btn btn-default" href="@Url.Action("Index", "Logga")">See here &raquo;</a></p>

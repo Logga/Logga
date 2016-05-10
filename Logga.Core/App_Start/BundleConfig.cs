@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace ErrorLog.Core
+namespace Logga
 {
     public class BundleConfig
     {

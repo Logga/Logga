@@ -57,7 +57,7 @@ WriteLiteral(">\r\n    <title>");
             
             #line default
             #line hidden
-WriteLiteral(" - My ASP.NET Application</title>\r\n");
+WriteLiteral(" - Logga Dashboard</title>\r\n");
 
 WriteLiteral("    ");
 

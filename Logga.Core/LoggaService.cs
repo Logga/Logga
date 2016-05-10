@@ -10,7 +10,7 @@ using Logga.Data;
 
 namespace Logga
 {
-    public class LoggaService
+    public static class LoggaService
     {
         public static void CreateLogFromContext(HttpContext context)
         {
