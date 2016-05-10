@@ -1,9 +1,11 @@
 #Logga
 
-Save erros logs in Web Applications.
+Save logs from ASP.NET Web Applications in one single place.
 
+See Wiki and Samples to get started.
 
 ##License
+
 Copyright © 2016 Renilson Andrade Meneguci <renilsonmeneguci@gmail.com>
 
 This work is free. You can redistribute it and/or modify it under the
