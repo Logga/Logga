@@ -12,7 +12,6 @@ namespace LoggaSample.Mvc
             ConfigureAuth(app);
 
             LoggaConfiguration.UseSqlServerData("DefaultConnection");
-
         }
     }
 }
