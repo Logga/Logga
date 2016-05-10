@@ -8,6 +8,7 @@ using System.Configuration;
 using Dapper;
 using System.Reflection;
 using System.IO;
+using System.Data;
 
 namespace Logga.Data.SqlServer
 {
@@ -16,7 +17,11 @@ namespace Logga.Data.SqlServer
         private readonly SqlConnection _connection;
         private readonly string _connectionString;
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="connectionStringOrName"></param>
+        /// <param name="installSchema"></param>
         public UseSqlServerData(string connectionStringOrName, bool installSchema = true)
         {
             if (connectionStringOrName == null) throw new ArgumentNullException("connectionStringOrName");
@@ -38,6 +43,7 @@ namespace Logga.Data.SqlServer
 
             if (installSchema)
             {
+                CheckDatabaseExists();
                 using (var connection = GetOpenConnection())
                 {
                     Install(connection);
@@ -45,11 +51,21 @@ namespace Logga.Data.SqlServer
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="connectionStringOrName"></param>
+        /// <returns></returns>
         internal bool isConnectionString(string connectionStringOrName)
         {
             return connectionStringOrName.Contains(";");
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="connectionStringName"></param>
+        /// <returns></returns>
         internal bool IsConnectionStringInConfiguration(string connectionStringName)
         {
             var connectionStringSetting = ConfigurationManager.ConnectionStrings[connectionStringName];
@@ -57,6 +73,10 @@ namespace Logga.Data.SqlServer
             return connectionStringSetting != null;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         internal SqlConnection GetOpenConnection()
         {
             if (_connection != null)
@@ -70,6 +90,10 @@ namespace Logga.Data.SqlServer
             return connection;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="connection"></param>
         internal void Install(SqlConnection connection)
         {
             if (connection == null) throw new ArgumentNullException("connection");
@@ -81,6 +105,12 @@ namespace Logga.Data.SqlServer
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="assembly"></param>
+        /// <param name="resourceName"></param>
+        /// <returns></returns>
         internal string GetTextFomFile(Assembly assembly, string resourceName)
         {
             using (var stream = assembly.GetManifestResourceStream(resourceName))
@@ -97,6 +127,33 @@ namespace Logga.Data.SqlServer
                 {
                     return reader.ReadToEnd();
                 }
+            }
+        }
+
+        /// <summary>
+        /// Check if database exists. If not, create a new database.
+        /// </summary>
+        internal void CheckDatabaseExists()
+        {
+            try
+            {
+                using (var connection = new SqlConnection("Server=.\\SQLEXPRESS;Integrated security=SSPI;database=master"))
+                {
+                    connection.Open();
+                    var command = new SqlCommand("SELECT db_id('Logga')", connection);
+                    var test = command.ExecuteScalar();
+
+                    if (test == DBNull.Value)
+                    {
+                        var createDatabaseCommand = new SqlCommand("CREATE DATABASE Logga", connection);
+
+                        createDatabaseCommand.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
             }
         }
 

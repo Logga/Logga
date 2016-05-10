@@ -6,8 +6,14 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{13C6ACFA-EB15-42C9-9C5E-0B2FE67278AA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logga", "Logga.Core\Logga.csproj", "{9261AB89-07CF-4EE3-8A86-19095F244665}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FB392211-BD34-4CCB-AB67-FC12A077D73D} = {FB392211-BD34-4CCB-AB67-FC12A077D73D}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logga.Data.SqlServer", "Logga.Data.SqlServer\Logga.Data.SqlServer.csproj", "{B884DAD5-1752-4A10-8500-27914DB6FA4F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FB392211-BD34-4CCB-AB67-FC12A077D73D} = {FB392211-BD34-4CCB-AB67-FC12A077D73D}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3C4F605C-921A-4658-8075-37788370E574}"
 	ProjectSection(SolutionItems) = preProject
