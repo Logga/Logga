@@ -1,9 +1,5 @@
 ﻿using ErrorLog.Core.Attributes;
 using Logga;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -21,7 +17,7 @@ namespace LoggaSample.Api
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            LoggaConfiguration.UseSqlServerData("ErrorLogContext");
+            LoggaConfiguration.UseSqlServerData("DefaultConnection");
             GlobalConfiguration.Configuration.Filters.Add(
                 new ErrorLogFilterAttribute());
         }
