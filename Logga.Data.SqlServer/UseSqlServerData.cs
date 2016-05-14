@@ -22,28 +22,28 @@ namespace Logga.Data.SqlServer
         /// </summary>
         /// <param name="connectionStringOrName"></param>
         /// <param name="installSchema"></param>
-        public UseSqlServerData(string connectionStringOrName, bool installSchema = true)
+        public UseSqlServerData(string connectionStringOrName, bool installSchema = true, bool createNewDatabase = false)
         {
             if (connectionStringOrName == null) throw new ArgumentNullException("connectionStringOrName");
 
-            if (IsConnectionStringInConfiguration(connectionStringOrName))
+            var isConnectionStringInConfiguration = IsConnectionStringInConfiguration(connectionStringOrName);
+
+            if (isConnectionStringInConfiguration)
             {
                 _connectionString = ConfigurationManager.ConnectionStrings[connectionStringOrName].ConnectionString;
             }
-            else if (isConnectionString(connectionStringOrName))
+            else 
             {
                 _connectionString = connectionStringOrName;
             }
-            else
-            {
-                throw new ArgumentException(
-                    string.Format("Could not find connection string with name '{0}' in application config file",
-                                  connectionStringOrName));
+
+            if(createNewDatabase){
+
+                CheckDatabaseExists(connectionStringOrName, isConnectionStringInConfiguration);
             }
 
             if (installSchema)
             {
-                CheckDatabaseExists();
                 using (var connection = GetOpenConnection())
                 {
                     Install(connection);
@@ -131,13 +131,15 @@ namespace Logga.Data.SqlServer
         }
 
         /// <summary>
-        /// Check if database exists. If not, create a new database.
+        /// Create a new database.
         /// </summary>
-        internal void CheckDatabaseExists()
+        internal void CheckDatabaseExists(string connectionString, bool isConnectionStringConiguration)
         {
             try
             {
-                using (var connection = new SqlConnection("Server=.\\SQLEXPRESS;Integrated security=SSPI;database=master"))
+                connectionString = GetConnectionStringWitOutServer(connectionString, isConnectionStringConiguration);
+
+                using (var connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
                     var command = new SqlCommand("SELECT db_id('Logga')", connection);
@@ -157,23 +159,32 @@ namespace Logga.Data.SqlServer
             }
         }
 
-        //public static SqlConnection GetOpenConnection(string conn)
-        //{
-        //    if (conn == null) throw new ArgumentNullException("connectionStringOrName");
+        /// <summary>
+        /// Return Connection String witout database name
+        /// </summary>
+        /// <param name="connectionString"></param>
+        /// <returns></returns>
+        internal String GetConnectionStringWitOutServer(string connectionString, bool isConnectionStringConiguration)
+        {
+            if (connectionString == null) throw new ArgumentException(
+                                string.Format("Could not find connection string with name '{0}' in application config file", connectionString));
 
-        //    if (IsConnectionStringInConfiguration(conn))
-        //    {
-        //        _connectionString = ConfigurationManager.ConnectionStrings[connectionStringOrName].ConnectionString;
-        //    }
-        //    else if (isConnectionString(connectionStringOrName))
-        //    {
-        //        _connectionString = connectionStringOrName;
-        //    }
+            if (isConnectionStringConiguration)
+            {
+                connectionString = ConfigurationManager.ConnectionStrings[connectionString].ToString();
+            }
 
-        //    var connection = new SqlConnection(_connectionString);
-        //    connection.Open();
+            var listProtertys = connectionString.Split(';');
 
-        //    return connection;
-        //}
+            if (listProtertys == null) throw new ArgumentException(
+                                 string.Format("Could not find connection string with name '{0}' in application config file", connectionString));
+
+            var database = listProtertys.FirstOrDefault(x => x.ToLower().Contains("database") || x.ToLower().Contains("initial catalog"));
+
+            if (connectionString == null) throw new ArgumentException(
+                                  string.Format("Could not find connection string with name '{0}' in application config file", connectionString));
+
+            return connectionString.Replace(database, "database=master");
+        }
     }
 }

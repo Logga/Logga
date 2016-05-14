@@ -10,9 +10,9 @@ namespace Logga
     {
         public static String _connectionString;
 
-        public static void UseSqlServerData(String connectionString)
+        public static void UseSqlServerData(String connectionString, bool installSchema = true, bool createNewDatabase = false)
         {
-            var sql = new UseSqlServerData(connectionString);
+            var sql = new UseSqlServerData(connectionString, installSchema, createNewDatabase);
             _connectionString = connectionString;
         }
     }
